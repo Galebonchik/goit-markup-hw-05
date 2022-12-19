@@ -65,6 +65,26 @@ body {
     display: flex;
     margin-left: 77px;
 }
+
+.site-nav .link.current {
+    color:var(--accent-color);
+} 
+
+.current::after{
+    content: "";
+    position: absolute;
+    display: block;
+   
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    top:44px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+
 .site-nav .list:not(:last-child){
     margin-right: 40px;
 }
@@ -73,6 +93,7 @@ body {
     font-weight: 500;
     text-decoration: none;
     display: block;
+    position: relative;
     }
 .site-nav .link:hover,
 .site-nav .link:focus{
@@ -339,7 +360,35 @@ img{
     border: 1px solid var(--secondary-bg-color);
     border-top: none;
 }
+.template-thumb{
+    position: relative;
+    overflow: hidden;
+  
+}
+.text-thumb{
+    position: absolute;
 
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 40px 32px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--secondary-bg-color);
+    background-color: var( --accent-color);
+
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-project:hover .text-thumb,
+.link-project:focus .text-thumb{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
 .employees-photo{
     background-color: var(--primary-bg-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
