@@ -540,16 +540,16 @@ border-radius: 0px 0px 4px 4px;
     height: 100%;
     padding-top: 0px;
     padding-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.1);
     }
 
     .footer-social .icon-social {
         display: inline-block;
         width: 40px;
         height: 40px;
-        background-color: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+           }
 
    
      .icon-social a:hover, 
@@ -557,8 +557,7 @@ border-radius: 0px 0px 4px 4px;
         background-color: var(--social-hover-color);
         border-radius: 50%;
         border: 1px solid var(--social-hover-color);
-        
-                }
+}
 
 .footer-title {
     color: var(--primary-bg-color);
@@ -572,4 +571,4 @@ border-radius: 0px 0px 4px 4px;
     display: flex;
     gap: 24px;
     justify-content: center;
-}
+    }
